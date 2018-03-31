@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04D315A7AC3E745463291E03 /* Pods_iOScodingchallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB66945FCF19C308FF1F000 /* Pods_iOScodingchallenge.framework */; };
+		AF2A3E39206FBC69001C8EEF /* SearchTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2A3E38206FBC69001C8EEF /* SearchTableVC.swift */; };
 		AFECBC11205D39AB00E93FCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECBC10205D39AB00E93FCC /* AppDelegate.swift */; };
 		AFECBC13205D39AB00E93FCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECBC12205D39AB00E93FCC /* ViewController.swift */; };
 		AFECBC16205D39AB00E93FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFECBC14205D39AB00E93FCC /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		6B5CC6AFF512BEE5FB98B3DF /* Pods-iOScodingchallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOScodingchallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOScodingchallenge/Pods-iOScodingchallenge.release.xcconfig"; sourceTree = "<group>"; };
+		AF2A3E38206FBC69001C8EEF /* SearchTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableVC.swift; sourceTree = "<group>"; };
 		AFECBC0D205D39AB00E93FCC /* iOScodingchallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOScodingchallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFECBC10205D39AB00E93FCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFECBC12205D39AB00E93FCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				AFECBC10205D39AB00E93FCC /* AppDelegate.swift */,
 				AFECBC12205D39AB00E93FCC /* ViewController.swift */,
+				AF2A3E38206FBC69001C8EEF /* SearchTableVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			files = (
 				AFECBC13205D39AB00E93FCC /* ViewController.swift in Sources */,
 				AFECBC11205D39AB00E93FCC /* AppDelegate.swift in Sources */,
+				AF2A3E39206FBC69001C8EEF /* SearchTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
