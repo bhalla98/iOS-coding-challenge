@@ -60,7 +60,7 @@ class ViewController: UIViewController, LocateOnTheMap,  UISearchBarDelegate, GM
     }
 
     public func didFailAutocompleteWithError(_ error: Error) {
-//            resultText?.text = error.localizedDescription
+            resultText?.text = error.localizedDescription
     }
 
     public func didAutocomplete(with predictions: [GMSAutocompletePrediction]) {
