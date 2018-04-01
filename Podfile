@@ -5,9 +5,6 @@ target 'iOScodingchallenge' do
   use_frameworks!
 
   # Pods for iOScodingchallenge
-    pod 'SwiftyJSON'
-    pod 'Alamofire'
-    pod 'SVProgressHUD'
     pod 'GooglePlaces'
     pod 'GooglePlacePicker'
     pod 'GoogleMaps'
