@@ -10,7 +10,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class ViewController: UIViewController, LocateOnTheMap,  UISearchBarDelegate, GMSAutocompleteFetcherDelegate {
+class ViewController: UIViewController, LocateOnMap, UISearchBarDelegate, GMSAutocompleteFetcherDelegate {
     
     @IBOutlet weak var mapContainer: UIView!
     
@@ -44,7 +44,7 @@ class ViewController: UIViewController, LocateOnTheMap,  UISearchBarDelegate, GM
         self.present(searchController, animated:true, completion: nil)
     }
 
-    func locateWithLongitude(_ lon: Double, andLatitude lat: Double, andTitle title: String) {
+    func locateWithLonAndLat(_ lon: Double, andLatitude lat: Double, andTitle title: String) {
         DispatchQueue.main.async { () -> Void in
 
             let position = CLLocationCoordinate2DMake(lat, lon)

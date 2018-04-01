@@ -12,14 +12,14 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-protocol LocateOnTheMap{
-    func locateWithLongitude(_ lon:Double, andLatitude lat:Double, andTitle title: String)
+protocol LocateOnMap{
+    func locateWithLonAndLat(_ lon:Double, andLatitude lat:Double, andTitle title: String)
 }
 
 class SearchTableVC: UITableViewController {
     
     var searchResults: [String]!
-    var delegate: LocateOnTheMap!
+    var delegate: LocateOnMap!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,13 +69,13 @@ class SearchTableVC: UITableViewController {
             
             do {
                 if data != nil{
-                    let dic = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves) as! NSDictionary
+                    let dict = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves) as! NSDictionary
                     
-                    let lat =   (((((dic.value(forKey: "results") as! NSArray).object(at: 0) as! NSDictionary).value(forKey: "geometry") as! NSDictionary).value(forKey: "location") as! NSDictionary).value(forKey: "lat")) as! Double
+                    let lat =   (((((dict.value(forKey: "results") as! NSArray).object(at: 0) as! NSDictionary).value(forKey: "geometry") as! NSDictionary).value(forKey: "location") as! NSDictionary).value(forKey: "lat")) as! Double
                     
-                    let lon =   (((((dic.value(forKey: "results") as! NSArray).object(at: 0) as! NSDictionary).value(forKey: "geometry") as! NSDictionary).value(forKey: "location") as! NSDictionary).value(forKey: "lng")) as! Double
+                    let lon =   (((((dict.value(forKey: "results") as! NSArray).object(at: 0) as! NSDictionary).value(forKey: "geometry") as! NSDictionary).value(forKey: "location") as! NSDictionary).value(forKey: "lng")) as! Double
                     // 4
-                    self.delegate.locateWithLongitude(lon, andLatitude: lat, andTitle: self.searchResults[indexPath.row])
+                    self.delegate.locateWithLonAndLat(lon, andLatitude: lat, andTitle: self.searchResults[indexPath.row])
                 }
                 
             }catch {

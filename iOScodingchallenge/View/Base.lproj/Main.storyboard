@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Address-->
+        <!--Google Places-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOScodingchallenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,15 +32,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Address" id="Cn7-gm-lcd">
+                    <navigationItem key="navigationItem" title="Google Places" id="Cn7-gm-lcd">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="Eju-aP-yiV">
                             <connections>
-                                <action selector="addressSearch:" destination="BYZ-38-t0r" id="4ke-0n-lyd"/>
+                                <action selector="addressSearch:" destination="BYZ-38-t0r" id="HNa-JW-MMB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapContainer" destination="pz4-HM-RjR" id="UFD-Co-ne3"/>
+                        <outlet property="mapContainer" destination="pz4-HM-RjR" id="WrZ-o0-oro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
