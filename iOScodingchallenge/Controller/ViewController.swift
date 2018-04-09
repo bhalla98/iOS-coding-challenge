@@ -30,6 +30,7 @@ class ViewController: UIViewController, LocateOnMap, UISearchBarDelegate, GMSAut
         
         searchResult = SearchTableVC()
         searchResult.delegate = self
+        
         fetcher = GMSAutocompleteFetcher()
         fetcher.delegate = self
 
@@ -44,6 +45,7 @@ class ViewController: UIViewController, LocateOnMap, UISearchBarDelegate, GMSAut
         self.present(searchController, animated:true, completion: nil)
     }
 
+    // Calling LocateOnMap protocol method
     func locateWithLonAndLat(_ lon: Double, andLatitude lat: Double, andTitle title: String) {
         DispatchQueue.main.async { () -> Void in
 
@@ -58,7 +60,8 @@ class ViewController: UIViewController, LocateOnMap, UISearchBarDelegate, GMSAut
 
         }
     }
-
+    
+    // Handling predictions and errors using the protocol methods
     public func didFailAutocompleteWithError(_ error: Error) {
             resultText?.text = error.localizedDescription
     }
@@ -75,7 +78,8 @@ class ViewController: UIViewController, LocateOnMap, UISearchBarDelegate, GMSAut
         print(resultsArray)
 
     }
-
+    
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 
         self.resultsArray.removeAll()
